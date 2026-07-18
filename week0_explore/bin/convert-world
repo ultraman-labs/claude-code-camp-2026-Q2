@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Parse the CircleMUD world files in infrastructure/lib/world into JSON,
-# writing the results into preview/data/world (one subfolder per file type).
+# writing the results into preview/data/world.
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
@@ -15,11 +15,15 @@ cd "$PARSER_DIR"
 
 for type in mob obj shp wld zon trg qst; do
     mkdir -p "$DEST/$type"
-    for file in $(find "$SRC/$type" -name "*.$type"); do
+
+    while IFS= read -r -d '' file; do
         number=$(basename "$file" ".$type")
         echo "parsing $file -> $DEST/$type/$number.json"
-        uv run circlemud-parse --dest "$DEST/$type/$number.json" "$file"
-    done
+
+        uv run circlemud-parse \
+            --dest "$DEST/$type/$number.json" \
+            "$file"
+    done < <(find "$SRC/$type" -type f -name "*.$type" -print0)
 done
 
 echo "Done. JSON written to $DEST"
