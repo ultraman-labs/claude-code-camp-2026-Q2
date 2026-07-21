@@ -38,4 +38,7 @@ If we had an MCP server to our MUD SDK, then maybe we could drive the agent bett
 I think due to the complexity of world and player state data, I simply do not think updating Markdown files will be sufficient but we never concluded whether the current agentic loop of the coding harness could handle said task.
 
 > Use coding harnesses for coding, and for specialized agents make your own loop.
-> 
+
+## 2. Agent skills driven by main agent eg. ~/skills
+
+A very common way to drive specific functionality is via Agent skills which is an open format for agents adopted by many coding harnesses and agent SDKs.
