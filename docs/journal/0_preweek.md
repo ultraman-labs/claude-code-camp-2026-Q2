@@ -319,27 +319,4 @@ The remaining uncertainty is how to scale this architecture for:
 
 ## Key Takeaway
 
-The major Preweek takeaway is that a specialized use-case does not necessarily require placing all of the intelligence architecture inside "SKILL.md" files, or SDKs.
-
-It does require specialized tooling at the boundary where the language model interacts with the external system.
-
-For this MUD experiment:
-
-- Codex provides the intelligence;
-- the Skill provides the operating policy;
-- the Python helper provides the reliable interface;
-- Markdown files provide early-stage player and world memory.
-
-The strongest architecture was not a completely generic agent and not a completely hard-coded agent.
-
-It was a bounded autonomous agent.
-
-Codex was free to observe, reason, form hypotheses, choose commands, backtrack, and improve its search. At the same time, deterministic code handled the fragile Telnet protocol and prevented unsafe commands.
-
-The bakery experiment provided the clearest proof.
-
-Codex found the destination without being given the route and without placing navigation logic inside Python.
-
-The final lesson from Preweek is:
-
-> Keep the intelligence in the agent, but place reliability and safety in deterministic tooling.
+The major Preweek takeaway is that a specialized //
