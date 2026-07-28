@@ -12,7 +12,7 @@ __pycache__/
 # Local backup files
 *.bak
 
-# Packet Capturescaptures/
+# Packet Captures/
 captures/
 
 # Boukensha local configuration and secrets
