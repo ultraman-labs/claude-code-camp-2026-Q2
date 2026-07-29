@@ -5,9 +5,10 @@
 .env
 .env.local
 
-# Python generated files
+# Python generated files and virtual environments
 __pycache__/
 *.py[cod]
+.venv/
 
 # Local backup files
 *.bak
