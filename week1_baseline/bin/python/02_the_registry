@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+STEP_DIR="$(cd "$SCRIPT_DIR/../../python/02_the_registry" && pwd)"
+
+cd "$STEP_DIR"
+exec python examples/example.py
