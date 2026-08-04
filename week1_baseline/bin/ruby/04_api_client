@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+STEP_DIR="$(cd "$SCRIPT_DIR/../../ruby/04_api_client" && pwd)"
+
+cd "$STEP_DIR"
+exec bundle exec ruby examples/example.rb
