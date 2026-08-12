@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+echo
+echo "==========================================="
+echo " Running convert-world (~20 minutes)"
+echo "==========================================="
+echo
+
+source "$HOME/.nvm/nvm.sh"
+
+echo "Current directory: $(pwd)"
+
+# Already started in week0_explore by VS Code's tasks.json (cwd setting)
+# cd week0_explore
+./bin/convert-world
+
+echo
+echo "==========================================="
+echo " Starting Visualizer"
+echo "==========================================="
+echo
+
+nvm
+
+cd preview/web
+
+echo
+echo "==========================================="
+echo " Enter: npm run dev"
+echo "==========================================="
+echo
+
+npm run dev
