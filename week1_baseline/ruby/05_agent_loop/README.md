@@ -146,5 +146,5 @@ The contents of lib/boukensha.rb are...
 ## Run Example
 
 ```sh
-./week1_baseline/bin/05_agent_loop
+./week1_baseline/bin/05_agent_loop 
 ```

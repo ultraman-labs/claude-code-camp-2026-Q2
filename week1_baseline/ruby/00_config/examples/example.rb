@@ -21,6 +21,6 @@ puts
 puts "MUD host:       #{config.mud_host}:#{config.mud_port}"
 puts "MUD user:       #{config.mud_username}"
 puts
-puts "API key set?    #{!ENV['OPENAI_API_KEY'].nil?}"
+puts "API key set?    #{!ENV['ANTHROPIC_API_KEY'].nil?}"
 puts
 puts config

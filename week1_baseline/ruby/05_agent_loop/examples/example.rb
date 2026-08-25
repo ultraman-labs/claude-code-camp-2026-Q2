@@ -1,4 +1,4 @@
-ENV["BOUKENSHA_DIR"] ||= File.expand_path("../../../../.boukensha", __dir__)
+ENV["BOUKENSHA_DIR"] ||= File.expand_path("../../../.boukensha", __dir__)
 require_relative "../lib/boukensha"
 
 config          = Boukensha::Config.new
@@ -8,11 +8,9 @@ system_prompt   = Boukensha::Tasks::Player.system_prompt(
   user_prompts_dir: config.user_prompts_dir,
   default_prompts_dir: Boukensha::Config::PROMPTS_DIR
 )
-
 base_dir        = File.expand_path("..", __dir__)
 
 ctx      = Boukensha::Context.new(task: Boukensha::Tasks::Player, system: system_prompt)
-
 registry = Boukensha::Registry.new(ctx)
 
 provider = Boukensha::Tasks::Player.provider(player_settings)

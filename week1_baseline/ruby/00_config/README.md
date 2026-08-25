@@ -91,8 +91,8 @@ The following properties so far:
 ```yaml
 tasks:
   player:
-    provider: OpenAI        # provider name (string)
-    model: model: gpt-5.6-luna
+    provider: anthropic        # provider name (string)
+    model: claude-haiku-4-5
     prompt_override:
       system: true
 mud:

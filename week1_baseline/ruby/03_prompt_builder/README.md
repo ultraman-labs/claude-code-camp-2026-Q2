@@ -182,5 +182,5 @@ Anthropic, Ollama, and OpenAI all use `assistant` for the model's turn. Gemini c
 ## Run Example
 
 ```sh
-./week1_baseline/bin/ruby/03_prompt_builder
+./week1_baseline/bin/03_prompt_builder 
 ```

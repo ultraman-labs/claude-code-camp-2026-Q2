@@ -95,9 +95,9 @@ The raw response shape differs between backends. This is what you get back from 
 
 When the model wants to call a tool the response looks different. Anthropic uses `stop_reason: "tool_use"` and adds a `tool_use` block to `content`. Ollama adds a `tool_calls` array to `message`. Handling those differences is the job of step 5 — the Agent Loop.
 
-## Output example
+## Output eaxmple
 
-andrew ~/Sites/Claude-Code-Camp/iterations  $ ruby week1_baseline/ruby/04_api_client/examples/example.rb
+andrew ~/Sites/Claude-Code-Camp/iterations  $ ruby 03_api_client/examples/step3.rb                              
 === BOUKENSHA Step 4: API Client ===
 
 Sending request to https://api.anthropic.com/v1/messages...
@@ -115,9 +115,9 @@ Raw response:
 
 **OpenSSL Certificate**
 
-To keep things explainable and simple we are using net/http.
+To keep things explainable and simpel we are using net/http.
 Net HTTP has rough edges like supplying the correct SSL certificate
-from your machine.
+from your machine. 
 
 HTTPParty can solve this but we are trying to avoid any libraries.
 
@@ -128,5 +128,5 @@ ruby -e "require 'openssl'; puts OpenSSL::X509::DEFAULT_CERT_FILE"
 ## Run Example
 
 ```sh
-./week1_baseline/bin/ruby/04_api_client
+./week1_baseline/bin/04_api_client 
 ```
